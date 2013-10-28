@@ -185,6 +185,20 @@ function setupAttrib(gl,shader,attrib,location) {
 	makeVectorAttrib(gl, shader, location,shader.attribs, len, attrib.name);
 }
 
+
+function loadXMLDoc(filename, callback) {
+    var xmlhttp;
+    var text;
+    xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) callback(xmlhttp.responseText);
+    }
+
+    xmlhttp.open("GET", filename, true);
+    xmlhttp.send();
+}
+
 function getShader(gl, src, type) {
     var shader;
     //decides if it's a fragment or vertex shader
