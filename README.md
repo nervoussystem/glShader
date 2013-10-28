@@ -8,6 +8,8 @@ A wrapper for webgl shaders. Automatically load external shader files, compile, 
 ```javascript
 var shader = glShader.loadShader(gl, "shader.vert","shader.frag");
 
+//note this is an asyncronous load, you must check that it has compiled before using
+
 shader.begin();
 
 //set a uniform in the shader
