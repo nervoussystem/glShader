@@ -24,7 +24,7 @@ shader.attribs.vertexAttribute.set(buffer);
 
 //pointer method offers a little more flexibility allowing to input type, stride, and offset
 gl.bindBuffer(gl.ARRAY_BUFFER,buffer2);
-shader.attribs.otherAttribute.pointer(gl.UNSIGNED_SHORT, gl.false,0,12);
+shader.attribs.otherAttribute.pointer(gl.UNSIGNED_SHORT, gl.FALSE,0,12);
 
 //now draw something with your method of choice
 
