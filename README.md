@@ -5,7 +5,7 @@ A wrapper for webgl shaders. Automatically load external shader files, compile, 
 
 # usage
 
-  var shader = loadShader(gl, "shader.vert","shader.frag");
+  var shader = glShader.loadShader(gl, "shader.vert","shader.frag");
 
   shader.begin();
 
