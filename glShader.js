@@ -53,6 +53,7 @@ function Shader(gl, prog) {
   this.program = prog;
   this.uniforms = {};
   this.attribs = {};
+  this.isReady = false;
 }
 
 Shader.prototype.begin = function() {
@@ -247,6 +248,7 @@ glShader.makeShader = function(gl,program,shader) {
 		var attrib = gl.getActiveAttrib(program, i);
 		setupAttrib(gl,shader,attrib,i);
 	}
+	shader.isReady = true;
 	return shader;
 }
 
